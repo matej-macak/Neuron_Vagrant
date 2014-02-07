@@ -1,6 +1,6 @@
 # Installation
 
-The installation of Vagrant with Neuron is pretty straightforward and easy (which was one of the main reasons for the project's existence). 
+The installation of Vagrant with Neuron is pretty straightforward and easy (which was one of the main reasons for creating the project). 
 
 ## Quick start (for 64-bit machines):
 
