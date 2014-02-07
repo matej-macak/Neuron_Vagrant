@@ -11,7 +11,7 @@ The installation of Vagrant with Neuron is pretty straightforward and easy (whic
 5. When the installation finishes (this will take a while), simply open your browser and type the following: http://localhost:8888/
 6. Load neuron library with `import neuron` or `from neuron import h`
 
-## What's being done
+## Under the hood
 
 1. Vagrant installs precise64 virtual box to serve as the environment for NEURON building. 
 2. provision.sh is called during the installation which then proceeds to install major scientific python libraries apart from NEURON including numpy, scipy, matplotlib, pandas and sklearn. Other libraries can be easily installed with sudo pip install <library> command. 
