@@ -13,7 +13,7 @@ sudo apt-get install gfortran libopenblas-dev liblapack-dev --assume-yes
 #Install major libraries
 sudo pip install numpy
 sudo pip install pandas
-sudo pip install scipy
+#sudo pip install scipy
 sudo pip install scikit-learn
 sudo pip install ipython
 sudo pip install ipython --upgrade
@@ -66,16 +66,19 @@ sudo make install
 cd src/nrnpython
 sudo python setup.py install
 
-#Update environment variables
-export IV=/usr/local/
-export N=/usr/local/
-export CPU=x86_64
-export PATH="$IV/$CPU/bin:$N/$CPU/bin:$PATH"
-
 #Take all mods and compile them
-sudo cp /vagrant/Mods/* /usr/local/x86_64/bin
-cd /usr/local/x86_64/bin
+sudo cp /vagrant/Mods/* /usr/local/x86_64/bin/
+cd /usr/local/x86_64/bin/
+echo PATH $PATH
+[ -f ~/.profile ] || touch ~/.profile
+[ -f ~/.bash_profile ] || touch ~/.bash_profile
+grep 'PATH=/usr/local/x86_64/bin' ~/.profile || echo 'export PATH=/usr/local/x86_64/bin:$PATH' | tee -a ~/.profile
+grep 'PATH=/usr/local/x86_64/bin' ~/.bash_profile || echo 'export PATH=/usr/local/x86_64/bin:$PATH' | tee -a ~/.bash_profile
+. ~/.profile
+. ~/.bash_profile
+echo PATH $PATH
 sudo nrnivmodl
+sudo /usr/local/x86_64/bin/nrnivmodl
 
 #Build pyzmq for IPython Notebook
 cd /vagrant
@@ -101,6 +104,3 @@ sudo pip install jinja2
 
 #Launch IPython Notebook server
 sudo ipython notebook --pylab=inline --ip=0.0.0.0
-
-
-
