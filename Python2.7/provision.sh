@@ -86,7 +86,9 @@ sudo /usr/local/x86_64/bin/nrnivmodl
 #Install ipython modules and dependencies
 sudo pip install pyzmq
 sudo pip install tornado
+sudo pip install tornado --upgrade
 sudo pip install jinja2
+sudo pip install jsonschema
 
 #Launch IPython Notebook server
 cd /vagrant/
