@@ -13,7 +13,7 @@ sudo apt-get install gfortran libopenblas-dev liblapack-dev --assume-yes
 #Install major libraries
 sudo pip install numpy
 sudo pip install pandas
-#sudo pip install scipy
+sudo pip install scipy
 sudo pip install scikit-learn
 sudo pip install ipython
 sudo pip install ipython --upgrade
@@ -27,14 +27,17 @@ sudo apt-get build-dep matplotlib -y
 sudo apt-get install libicu48 #To get rid of annoying icui18n error in matplotlib
 
 #Install matplotlib
-wget https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.1/matplotlib-1.3.1.tar.gz
-tar -xzf matplotlib-1.3.1.tar.gz
-cd matplotlib-1.3.1
-sudo python setup.py install
+sudo pip install matplotlib
 
-#Remove dependencies that were automatically installed
-sudo apt-get remove python-pyparsing -y
-sudo apt-get remove python-numpy -y
+# IV dependencies
+sudo apt-get install automake -y
+sudo apt-get install libxt-dev -y
+sudo apt-get install autoconf -y
+sudo apt-get install libxext-dev -y
+sudo apt-get install libncurses-dev -y
+sudo apt-get install bison -y
+sudo apt-get install libtool -y
+sudo apt-get install flex -y
 
 #Install NEURON
 cd ..
@@ -80,27 +83,11 @@ echo PATH $PATH
 sudo nrnivmodl
 sudo /usr/local/x86_64/bin/nrnivmodl
 
-#Build pyzmq for IPython Notebook
-cd /vagrant
-mkdir pyzmq_dep
-cd pyzmq_dep
-
-#Build libzmq
-sudo apt-get install git -y
-sudo apt-get install autoconf automake -y
-git clone git://github.com/zeromq/libzmq.git
-sudo apt-get install libtool -y
-cd libzmq/
-./autogen.sh
-./configure
-sudo make
-sudo make check
-sudo make install
-
 #Install ipython modules and dependencies
 sudo pip install pyzmq
 sudo pip install tornado
 sudo pip install jinja2
 
 #Launch IPython Notebook server
-sudo ipython notebook --pylab=inline --ip=0.0.0.0
+cd /vagrant/
+sudo ipython notebook --ip=0.0.0.0 --port=8900
