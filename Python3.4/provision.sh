@@ -38,6 +38,7 @@ sudo pip3 install ipython --upgrade
 sudo pip3 install pyparsing
 sudo pip3 install pyparsing --upgrade
 sudo pip3 install matplotlib
+sudo pip3 install pyyaml
 
 # Install IPython Notebook dependencies
 sudo pip3 install pyzmq
