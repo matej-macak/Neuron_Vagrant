@@ -2,6 +2,8 @@
 
 The installation of Vagrant with Neuron is pretty straightforward and easy. 
 
+# Vagrant
+
 ## Quick start (for 64-bit machines):
 
 1. Install Virtual Box if you haven't already - instructions to which you can find [here](https://www.virtualbox.org/wiki/Downloads).
@@ -18,7 +20,18 @@ The installation of Vagrant with Neuron is pretty straightforward and easy.
 3. Mod files are then compiled which were stored in `/Mods` folder using the `nrnivmodl` command
 4. Finally, jupyter notebook (or jupyter lab for Python3.6 and Docker) is run via `port 8000`. 
 
-##Troubleshooting
+# Docker
 
-###32-bit systems
+## Quick start
+
+1. Install Virtual Box
+2. Install Docker Toolbox (or Docker for Windows)
+3. Clone this repository (as detailed above)
+4. Navigate to the Docker directory Base_Box and run `docker build -t neuron .`
+5. Navigate to the Nuron_w_Mods directory and run `docker build -t exp .`
+6. Run `docker run -it -v <path to directory to be shared>:/shared -p 8888:8888 exp`
+
+## Troubleshooting
+
+### 32-bit systems
 This installation requires a 64-bit machine to run. In case 32-bit is required, just change the name of the box and the address to download the box from. For the list of vagrant boxes, see [here](http://www.vagrantbox.es/). At the moment, 32-bit system is untested.
