@@ -1,6 +1,6 @@
 # Installation
 
-The installation of Vagrant with Neuron is pretty straightforward and easy. 
+The installation of Vagrant with Neuron and Docker images with optional installation of Mods located in `Mods` directory. 
 
 # Vagrant
 
