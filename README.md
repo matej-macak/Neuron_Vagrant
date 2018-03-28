@@ -16,7 +16,7 @@ The installation of Vagrant with Neuron is pretty straightforward and easy.
 1. Vagrant installs `ubuntu/trusty64` (or `ubuntu/xenial64` for Python 3.6) virtual box to serve as the environment for NEURON building. 
 2. provision.sh is called during the installation which then proceeds to install major scientific python libraries apart from NEURON including numpy, scipy, matplotlib, pandas and sklearn. Other libraries can be easily installed with sudo pip install <library> command. 
 3. Mod files are then compiled which were stored in `/Mods` folder using the `nrnivmodl` command
-4. Finally, ipython and ipython notebook is run via `port 8890` for `Python3.4` and `port 8900` for `Python2.7`. 
+4. Finally, jupyter notebook (or jupyter lab for Python3.6 and Docker) is run via `port 8000`. 
 
 ##Troubleshooting
 
