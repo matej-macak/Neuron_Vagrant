@@ -8,7 +8,7 @@ The installation of Vagrant with Neuron is pretty straightforward and easy.
 2. Install [Vagrant](http://www.vagrantup.com/)
 3. Clone this repository by `git clone https://github.com/matej-macak/Neuron_Vagrant/` or by downloading zip file and unpacking.
 4. Navigate to the directory of interest and run `vagrant up`
-5. When the installation finishes (this will take a while), simply open your browser and type the following: `http://localhost:8890/` for `Python3.4` and `http://localhost:8900/` for `Python2.7`
+5. When the installation finishes (this will take a while), simply open your browser and type the following: `http://localhost:8000/` (irrespective of installation type).
 6. Load neuron library with `import neuron` or `from neuron import h`
 
 ## Under the hood

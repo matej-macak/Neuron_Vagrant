@@ -89,3 +89,4 @@ sudo /usr/local/x86_64/bin/nrnivmodl
 
 # Run IPython Notebook
 cd /vagrant/
+sudo jupyter lab --port=8000 --ip=0.0.0.0 --allow-root --no-browser
