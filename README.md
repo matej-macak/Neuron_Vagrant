@@ -27,8 +27,8 @@ The installation of Vagrant with Neuron and Docker images with optional installa
 1. Install Virtual Box
 2. Install Docker Toolbox (or Docker for Windows)
 3. Clone this repository (as detailed above)
-4. Navigate to the Docker directory Base_Box and run `docker build -t neuron .`
-5. Navigate to the Nuron_w_Mods directory and run `docker build -t exp .`
+4. Navigate to the `Docker` directory `Base_Box` and run `docker build -t neuron .`
+5. Navigate to the `Neuron_w_Mods` directory and run `docker build -t exp .`
 6. Run `docker run -it -v <path to directory to be shared>:/shared -p 8888:8888 exp`
 
 ## Troubleshooting
